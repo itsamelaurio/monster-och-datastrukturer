@@ -6,11 +6,11 @@ class Printer(Observer):
 	#__novel: Novel
 
 	def __init__(self):
-		self.__novel = ""
+		pass
 		
 	def setNovel(self, novel: Novel) -> None:
 		self.__novel = novel
-		self.update()
+		self.__novel.addObserver(self)
 	
 	def update(self) -> None:
 		print("Här är romanens innehåll:")

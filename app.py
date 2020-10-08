@@ -5,11 +5,9 @@ from librarian import Librarian
 novel = Novel("1984", "George Orwell")
 
 librarian = Librarian()
-novel.addObserver(librarian)
 librarian.setNovel(novel)
 
 printer = Printer()
-novel.addObserver(printer)
 printer.setNovel(novel)
 
 # Uppdatera årtalet
